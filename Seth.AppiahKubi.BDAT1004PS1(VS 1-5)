@@ -1,0 +1,495 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "8a2e4792",
+   "metadata": {},
+   "source": [
+    "# ASSIGNMENT PROBLEM SET 1\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "246e1deb",
+   "metadata": {},
+   "source": [
+    "# QUESTIONS 1 - 5 (VIZUAL STUDIO C#)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4ecab485",
+   "metadata": {},
+   "source": [
+    "# Question 1 C#\n",
+    "#What data type is each of the following?\n",
+    "#5\n",
+    "#5.0\n",
+    "#5 > 1\n",
+    "#'5'\n",
+    "#5 * 2\n",
+    "#'5' * 2\n",
+    "#'5' + '2'\n",
+    "#5 / 2\n",
+    "#5 % 2\n",
+    "#{5, 2, 1}\n",
+    "#5 == 3\n",
+    "#Pi (the number)\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0ba29929",
+   "metadata": {},
+   "source": [
+    "# SOLUTION \n",
+    "\n",
+    "using System.ComponentModel;\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 1 ================================\\n\");\n",
+    "\n",
+    "var expressions = new object[]\n",
+    "            {\n",
+    "            5,\n",
+    "            5.0,\n",
+    "            5 > 1,\n",
+    "            \"5\",\n",
+    "            5 * 2,\n",
+    "           // \"5\" * 2,\n",
+    "            \"5\" + \"2\",\n",
+    "            5 / 2,\n",
+    "            5 % 2,\n",
+    "            new[] { 5, 2, 1 },\n",
+    "            5 == 3,\n",
+    "            Math.PI\n",
+    "            };\n",
+    "\n",
+    "foreach (var expr in expressions)\n",
+    "{\n",
+    "    Console.WriteLine($\"{expr} is of type {expr.GetType()}\");\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c436d703",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "\n",
+    "=============================== Question 1 ================================\n",
+    "\n",
+    "5 is of type System.Int32\n",
+    "5 is of type System.Double\n",
+    "True is of type System.Boolean\n",
+    "5 is of type System.String\n",
+    "10 is of type System.Int32\n",
+    "52 is of type System.String\n",
+    "2 is of type System.Int32\n",
+    "1 is of type System.Int32\n",
+    "System.Int32[] is of type System.Int32[]\n",
+    "False is of type System.Boolean\n",
+    "3.141592653589793 is of type System.Double"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0c3e593d",
+   "metadata": {},
+   "source": [
+    "# Question 2 C#\n",
+    "\n",
+    "#Write (and evaluate) C# expressions that answer these questions:\n",
+    "#a. How many letters are there in 'Supercalifragilisticexpialidocious'?\n",
+    "#b. Does 'Supercalifragilisticexpialidocious' contain 'ice' as a substring?\n",
+    "#c. Which of the following words is the longest:\n",
+    "#Supercalifragilisticexpialidocious, Honorificabilitudinitatibus, or\n",
+    "#Bababadalgharaghtakamminarronnkonn?\n",
+    "#d. Which composer comes first in the dictionary: 'Berlioz', 'Borodin', 'Brian',\n",
+    "#'Bartok', 'Bellini', 'Buxtehude', 'Bernstein'. Which one comes last?\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "baf70a4a",
+   "metadata": {},
+   "source": [
+    "# SOLUTION"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2bf2c868",
+   "metadata": {},
+   "source": [
+    "#a. How many letters are there in 'Supercalifragilisticexpialidocious'?\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 2 ==============================\\n\");\n",
+    "\n",
+    "string text1 = \"Supercalifragilisticexpialidocious\";\n",
+    "int textlength = text1.Length;\n",
+    "Console.WriteLine(\"lenght of the text1 is\" + textlength);\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "62dcf85a",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "lenght of the text1 is 34"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a7b69116",
+   "metadata": {},
+   "source": [
+    "#b. Does 'Supercalifragilisticexpialidocious' contain 'ice' as a substring?\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 2 ==============================\\n\");\n",
+    "string text2 = \"Supercalifragilisticexpialidocious\";\n",
+    "bool word = text2.Contains(\"ice\");\n",
+    "Console.WriteLine(word);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "85183ae5",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "True"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "548ac1a5",
+   "metadata": {},
+   "source": [
+    "#c. Which of the following words is the longest:\n",
+    "\n",
+    "#Supercalifragilisticexpialidocious,\n",
+    "#Honorificabilitudinitatibus,\n",
+    "#orBababadalgharaghtakamminarronnkonn?\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 2 ==============================\\n\");\n",
+    "\n",
+    "string message1 = \"Supercalifragilisticexpialidocious\";\n",
+    "string message2 = \"Honorificabilitudinitatibus\";\n",
+    "string message3 = \"Bababadalgharaghtakamminarronnkonn\";\n",
+    "\n",
+    "if (message1.Length > message2.Length && message1.Length > message3.Length)\n",
+    "{\n",
+    "    Console.WriteLine(message1 + \" is the longest word.\");\n",
+    "}\n",
+    "else if (message2.Length > message1.Length && message2.Length > message3.Length)\n",
+    "{\n",
+    "    Console.WriteLine(message2 + \" is the longest word.\");\n",
+    "}\n",
+    "else if (message3.Length > message1.Length && message3.Length > message2.Length)\n",
+    "{\n",
+    "    Console.WriteLine(message3 + \" is the longest word.\");\n",
+    "}\n",
+    "else\n",
+    "{\n",
+    "    Console.WriteLine(\"two message have same lenght\");\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5227e36c",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "two message have same lenght"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d8602442",
+   "metadata": {},
+   "source": [
+    "#d. Which composer comes first in the dictionary: 'Berlioz', 'Borodin', 'Brian',\n",
+    "#'Bartok', 'Bellini', 'Buxtehude', 'Bernstein'. Which one comes last?\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 2 ==============================\\n\");\n",
+    "\n",
+    "string[] composer1 = { \"Berlioz\", \"Borodin\", \"Brian\", \"Bartok\", \"Bellini\", \"Buxtehude\", \"Bernstein\" };\n",
+    "Array.Sort(composer1);\n",
+    "\n",
+    "Console.WriteLine(\"First composer: \" + composer1[0]);\n",
+    "Console.WriteLine(\"Last composer: \" + composer1[composer1.Length - 1]);"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4965326e",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "First composer: Bartok\n",
+    "Last composer: Buxtehude"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "536581e3",
+   "metadata": {},
+   "source": [
+    "# Question 3 C#\n",
+    "\n",
+    "#Implement function triangleArea(a,b,c) that takes as input the lengths of the 3\n",
+    "#sides of a triangle and returns the area of the triangle. By Heron's formula, the area\n",
+    "#of a triangle with side lengths a, b, and c is\n",
+    "#s(s - a)(s -b)(s -c)\n",
+    "#, where\n",
+    "#s = (a+b+c)/2.\n",
+    "#>>> triangleArea(2,2,2)\n",
+    "#1.7320508075688772"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f1df61b9",
+   "metadata": {},
+   "source": [
+    "# SOLUTION"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "905f1a39",
+   "metadata": {},
+   "source": [
+    "Console.WriteLine(\"\\n=============================== Question 3 ======================================\\n\");\n",
+    "\n",
+    "\n",
+    "Console.WriteLine(triangleArea(2, 2, 2));\n",
+    "static double triangleArea(double a, double b, double c)\n",
+    "{\n",
+    "    double s = (a + b + c) / 2;\n",
+    "    double trianglearea = Math.Sqrt(s * (s - a) * (s - b) * (s - c));\n",
+    "    return trianglearea;\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6b5439b7",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "1.7320508075688772"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4d10d398",
+   "metadata": {},
+   "source": [
+    "# Question 4 C#\n",
+    "\n",
+    "#Write a program in C# Sharp to separate odd and even integers in separate arrays.\n",
+    "#Go to the editor\n",
+    "#Test Data :\n",
+    "#Input the number of elements to be stored in the array :5\n",
+    "#Input 5 elements in the array :\n",
+    "#element - 0 : 25\n",
+    "#element - 1 : 47\n",
+    "#element - 2 : 42\n",
+    "#element - 3 : 56\n",
+    "#element - 4 : 32\n",
+    "#Expected Output:\n",
+    "#The Even elements are:\n",
+    "#42 56 32\n",
+    "#The Odd elements are :\n",
+    "#25 47"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0516ca93",
+   "metadata": {},
+   "source": [
+    "# SOLUTION"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "69e01dcf",
+   "metadata": {},
+   "source": [
+    "Console.WriteLine(\"\\n=============================== Question 4 ======================================\\n\");\n",
+    "\n",
+    "\n",
+    "Console.WriteLine(\"Input the number of elements to be stored in the array: \");\n",
+    "int q = Convert.ToInt32(Console.ReadLine());\n",
+    "\n",
+    "int[] array = new int[q];\n",
+    "int[] evennum = new int[q];\n",
+    "int[] oddnum = new int[q];\n",
+    "\n",
+    "Console.WriteLine($\"Input {q} elements in the array:\");\n",
+    "for (int i = 0; i < q; i++)\n",
+    "{\n",
+    "    Console.Write($\"element - {i} : \");\n",
+    "    array[i] = Convert.ToInt32(Console.ReadLine());\n",
+    "}\n",
+    "\n",
+    "int evenvalue = 0;\n",
+    "int oddvalue = 0;\n",
+    "for (int i = 0; i < q; i++)\n",
+    "{\n",
+    "    if (array[i] % 2 == 0)\n",
+    "    {\n",
+    "        evennum[evenvalue] = array[i];\n",
+    "        evenvalue++;\n",
+    "    }\n",
+    "    else\n",
+    "    {\n",
+    "        oddnum[oddvalue] = array[i];\n",
+    "        oddvalue++;\n",
+    "    }\n",
+    "}\n",
+    "\n",
+    "Console.Write(\"The Even elements are: \");\n",
+    "for (int i = 0; i < evenvalue; i++)\n",
+    "{\n",
+    "    Console.Write($\"{evennum[i]} \");\n",
+    "}\n",
+    "\n",
+    "Console.Write(\"\\nThe Odd elements are: \");\n",
+    "for (int i = 0; i < oddvalue; i++)\n",
+    "{\n",
+    "    Console.Write($\"{oddnum[i]} \");\n",
+    "}"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "af115ba6",
+   "metadata": {},
+   "source": [
+    "# OUTPUT\n",
+    "\n",
+    "Input the number of elements to be stored in the array:\n",
+    "5\n",
+    "Input 5 elements in the array:\n",
+    "element - 0 : 25\n",
+    "element - 1 : 47\n",
+    "element - 2 : 42\n",
+    "element - 3 : 56\n",
+    "element - 4 : 32\n",
+    "The Even elements are: 42 56 32\n",
+    "The Odd elements are: 25 47"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "aedce112",
+   "metadata": {},
+   "source": [
+    "# Question 5 C#\n",
+    "\n",
+    "#a. Write a function inside(x,y,x1,y1,x2,y2) that returns True or False\n",
+    "#depending on whether the point (x,y) lies in the rectangle with lower left\n",
+    "#corner (x1,y1) and upper right corner (x2,y2).\n",
+    "#>>> inside(1,1,0,0,2,3)\n",
+    "#True\n",
+    "#>>> inside(-1,-1,0,0,2,3)\n",
+    "#False\n",
+    "#b. Use function inside() from part a. to write an expression that tests whether\n",
+    "#the point (1,1) lies in both of the following rectangles: one with lower left\n",
+    "#corner (0.3, 0.5) and upper right corner (1.1, 0.7) and the other with lower\n",
+    "#left corner (0.5, 0.2) and upper right corner (1.1, 2). "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4854c741",
+   "metadata": {},
+   "source": [
+    "# SOLUTION"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d6424927",
+   "metadata": {},
+   "source": [
+    "#a. Write a function inside(x,y,x1,y1,x2,y2) that returns True or False\n",
+    "#depending on whether the point (x,y) lies in the rectangle with lower left\n",
+    "#corner (x1,y1) and upper right corner (x2,y2).\n",
+    "#>>> inside(1,1,0,0,2,3)\n",
+    "#True\n",
+    "#>>> inside(-1,-1,0,0,2,3)\n",
+    "#False\n",
+    "\n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 5 ======================================\\n\");\n",
+    "\n",
+    " static bool Inside(double a, double b, double a1, double b1, double a2, double b2)\n",
+    " {\n",
+    "     return (a >= a1 && a <= a2) && (b >= b1 && b <= b2);\n",
+    " }\n",
+    " \n",
+    " \n",
+    " \n",
+    " #b. Use function inside() from part a. to write an expression that tests whether\n",
+    "#the point (1,1) lies in both of the following rectangles: one with lower left\n",
+    "#corner (0.3, 0.5) and upper right corner (1.1, 0.7) and the other with lower\n",
+    "#left corner (0.5, 0.2) and upper right corner (1.1, 2). \n",
+    "\n",
+    "Console.WriteLine(\"\\n=============================== Question 5 ======================================\\n\");\n",
+    "\n",
+    "static void Main(string[] args)\n",
+    "{\n",
+    "    double a = 1;\n",
+    "    double b = 1;\n",
+    "\n",
+    "    bool isInsideRectangle1 = Inside(a, b, 0.3, 0.5, 1.1, 0.7);\n",
+    "    bool isInsideRectangle2 = Inside(a, b, 0.5, 0.2, 1.1, 2);\n",
+    "\n",
+    "    Console.WriteLine(\"Is (1,1) inside the first rectangle? \" + isInsideRectangle1);\n",
+    "    Console.WriteLine(\"Is (1,1) inside the second rectangle? \" + isInsideRectangle2);\n",
+    "\n",
+    "    // Check if (1,1) is inside both rectangles\n",
+    "    bool isInsideBothRectangles = isInsideRectangle1 && isInsideRectangle2;\n",
+    "    Console.WriteLine(\"Is (1,1) inside both rectangles? \" + isInsideBothRectangles);\n",
+    "}"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.11.4"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
